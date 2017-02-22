@@ -1,4 +1,4 @@
-package org.mshimomu.spock.sample;
+package junit.tutorial;
 
 /**
  * Created by Masaya SHIMOMURA on 2015/08/24.

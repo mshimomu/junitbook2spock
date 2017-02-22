@@ -1,4 +1,4 @@
-package org.mshimomu.spock.sample
+package junit.tutorial
 
 import spock.lang.Specification
 import spock.lang.Unroll

@@ -1,4 +1,4 @@
-package org.mshimomu.spock.sample;
+package junit.tutorial;
 
 import org.junit.Test;
 
@@ -17,4 +17,13 @@ public class CalculatorTest {
         int actual = calc.multiply(3, 4);
         assertThat(actual, is(expected));
     }
+
+    @Test
+    public void multiplyで5と7の乗算結果が取得できる() {
+        Calculator calc = new Calculator();
+        int expected = 35;
+        int actual = calc.multiply(5, 7);
+        assertThat(actual, is(expected));
+    }
+
 }
