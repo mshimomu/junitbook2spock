@@ -18,8 +18,8 @@ class CalculatorSpockTest extends Specification {
         expected == actual
     }
 
-    @Unroll("multiplyで#xと#yの乗算結果#expectedが取得できる")
-    def multiplyで乗算結果が取得できる() {
+    @Unroll
+    def "multiplyで#xと#yの乗算結果#expectedが取得できる"() {
         when:
         Calculator calc = new Calculator();
 
@@ -29,7 +29,21 @@ class CalculatorSpockTest extends Specification {
         where:
         x | y || expected
         3 | 4 || 12
-        3 | 5 || 15
+        5 | 7 || 35
+
+    }
+
+    @Unroll
+    def "multiplyで#xと#yの除算結果#expectedが取得できる"() {
+        when:
+        Calculator calc = new Calculator()
+
+        then:
+        expected == calc.divide(x, y)
+
+        where:
+        x | y || expected
+        3 | 2 || 1.5f
 
     }
 }
