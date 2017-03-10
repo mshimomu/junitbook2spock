@@ -34,7 +34,7 @@ class CalculatorSpockTest extends Specification {
     }
 
     @Unroll
-    def "multiplyで#xと#yの除算結果#expectedが取得できる"() {
+    def "divideで#xと#yの除算結果#expectedが取得できる"() {
         when:
         Calculator calc = new Calculator()
 
@@ -46,4 +46,6 @@ class CalculatorSpockTest extends Specification {
         3 | 2 || 1.5f
 
     }
+
+
 }
