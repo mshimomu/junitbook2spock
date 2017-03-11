@@ -47,5 +47,17 @@ class CalculatorSpockTest extends Specification {
 
     }
 
+    def "divideで#xと#yのとき#expectedを送出する"() {
+        when:
+        Calculator calc = new Calculator()
+        calc.divide(x, y)
 
+        then:
+        Exception e = thrown()
+        expected == e.class
+
+        where:
+        x | y || expected
+        5 | 0 || IllegalArgumentException
+    }
 }
