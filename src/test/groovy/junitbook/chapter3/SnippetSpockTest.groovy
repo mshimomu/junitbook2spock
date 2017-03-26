@@ -18,4 +18,20 @@ class SnippetSpockTest extends Specification{
          sut.size() == 1
          sut.get(0) == "Hello"
     }
+
+    // リスト3.6
+    def 要素が2つ追加された状態で要素をremoveするとsizeが1になる() {
+        // Setup
+        when:
+        def sut = new ArrayList<>()
+        sut.add("Hello")
+        sut.add("World")
+        // Exercise
+        sut.remove(0)
+        then:
+        sut.size() == 1
+        sut.get(0) == "World"
+    }
+
+
 }
